@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aurora-compiler-foundry"
+version = "2.7.0"
+description = "Aurora XML to Foundry VTT D&D5e compiler"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+aurora-compiler = "aurora_compiler.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
